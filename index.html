@@ -1,9 +1,72 @@
+<!DOCTYPE html>
 <html>
-	<head>
-	
-	</head>
-	<body>
-		<h1>Compression Interpreter</h1>
-	</body>
+
+<head>
+  <script src="pako.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Compression Interpreter</h1>
+    <div class="row">
+      <div class="col-xs-4">
+        <h3><b>
+          Input
+        </b></h3>
+        <textarea>
+        </textarea>
+      </div>
+      <div class="col-xs-4">
+        <h3><b>
+          Compression Type
+        </b></h3>
+        <select>
+          <option>ZLIB</option>
+          <option>GZIP</option>
+        </select><br/><br/>
+        <button class="btn btn-primary" type="button">Deflate (pack)</button>
+        <button class="btn btn-success" type="button">Inflate (unpack)</button>
+      </div>
+      <div class="col-xs-4">
+        <h3><b>
+          Results
+        </b></h3>
+        <textarea></textarea>
+      </div>
+    </div>
+  </div>
+  <script>
+  // Get datastream as Array, for example:
+  var charData = [31, 139, 8, 0, 0, 0, 0, 0, 0, 3, 5, 193, 219, 13, 0, 16, 16, 4, 192, 86, 214, 151, 102, 52, 33, 110,
+    35, 66, 108, 226, 60, 218, 55, 147, 164, 238, 24, 173, 19, 143, 241, 18, 85, 27, 58, 203, 57, 46, 29, 25, 198, 34,
+    163, 193, 247, 106, 179, 134, 15, 50, 167, 173, 148, 48, 0, 0, 0
+  ];
+
+  // Turn number array into byte-array
+  var binData = new Uint8Array(charData);
+
+  // Pako magic
+  var data = pako.inflate(binData);
+
+  // Convert gunzipped byteArray back to ascii string:
+  var strData = String.fromCharCode.apply(null, new Uint16Array(data));
+
+  // Output to console
+  console.log(strData);
+
+
+
+  var binaryString = pako.deflate("hello", {
+    to: 'string'
+  });
+
+  console.log('deflated', binaryString);
+  console.log('inflated', String.fromCharCode.apply(null, new Uint16Array(pako.inflate(binaryString))));
+  console.log('lol');
+  </script>
+</body>
 
 </html>
