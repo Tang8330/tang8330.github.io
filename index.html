@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Robin Tang</title>
+  <title>Robin Tang - Compression Online Editor</title>
   <script src="pako.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -17,7 +17,7 @@
         <h3><b>
           Input
         </b></h3>
-        <textarea>
+        <textarea id="input">
         </textarea>
       </div>
       <div class="col-xs-4">
@@ -27,19 +27,38 @@
         <select>
           <option>ZLIB</option>
           <option>GZIP</option>
-        </select><br/><br/>
-        <button class="btn btn-primary" type="button">Deflate (pack)</button>
-        <button class="btn btn-success" type="button">Inflate (unpack)</button>
+        </select>
+        <br/>
+        <br/>
+        <button class="btn btn-primary" type="button" id="deflate">Deflate (pack)</button>
+        <button class="btn btn-success" type="button" id="inflate">Inflate (unpack)</button>
       </div>
       <div class="col-xs-4">
         <h3><b>
           Results
         </b></h3>
-        <textarea></textarea>
+        <textarea id="results"></textarea>
       </div>
     </div>
   </div>
   <script>
+  (function() {
+    $('#deflate').click(function() {
+      var toDeflate = $('#input').val();
+      var deflatedString = pako.deflate(toDeflate, {
+        to: 'string'
+      });
+      $('#results').text(deflatedString);
+    });
+
+    $('#inflate').click(function() {
+      var toInflate = $('#input').val();
+
+      console.log(binaryString, 'is');
+      $('#results').text(String.fromCharCode.apply(null, new Uint16Array(pako.inflate(toInflate))));
+    });
+
+  })();
   // Get datastream as Array, for example:
   var charData = [31, 139, 8, 0, 0, 0, 0, 0, 0, 3, 5, 193, 219, 13, 0, 16, 16, 4, 192, 86, 214, 151, 102, 52, 33, 110,
     35, 66, 108, 226, 60, 218, 55, 147, 164, 238, 24, 173, 19, 143, 241, 18, 85, 27, 58, 203, 57, 46, 29, 25, 198, 34,
