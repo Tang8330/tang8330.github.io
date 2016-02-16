@@ -2,61 +2,47 @@
 <html>
 
 <head>
-  <title>Robin Tang - Compression Online Editor</title>
-  <script src="pako.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <title>Robin Tang - Compression Online Editor</title>
+    <script src="pako.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 </head>
 
 <body>
-  <div class="container">
-    <h1>Compression Interpreter</h1>
-    <div class="row">
-      <div class="col-xs-4">
-        <h3><b>
+    <div class="container">
+        <form>
+            <h1>Compression Interpreter</h1>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h3><b>
           Input
         </b></h3>
-        <textarea id="input"></textarea>
-      </div>
-      <div class="col-xs-4">
-        <h3><b>
+                    <textarea rows="6" class="form-control" id="input"></textarea>
+                </div>
+                <div class="col-xs-4">
+                    <h3><b>
           Compression Type
         </b></h3>
-        <select>
-          <option>ZLIB</option>
-          <option>GZIP</option>
-        </select>
-        <br/>
-        <br/>
-        <button class="btn btn-primary" type="button" id="deflate">Deflate (pack)</button>
-        <button class="btn btn-success" type="button" id="inflate">Inflate (unpack)</button>
-      </div>
-      <div class="col-xs-4">
-        <h3><b>
+                    <select>
+                        <option>ZLIB</option>
+                        <option>GZIP</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <button class="btn btn-primary" type="button" id="deflate">Deflate (pack)</button>
+                    <button class="btn btn-success" type="button" id="inflate">Inflate (unpack)</button>
+                </div>
+                <div class="col-xs-4">
+                    <h3><b>
           Results
         </b></h3>
-        <textarea id="results"></textarea>
-      </div>
+                    <textarea rows="6" class="form-control" id="results"></textarea>
+                </div>
+            </div>
+        </form>
     </div>
-  </div>
-  <script>
-  (function() {
-    $('#deflate').click(function() {
-      var toDeflate = $('#input').val();
-      var deflatedString = pako.deflate(toDeflate, {
-        to: 'string'
-      });
-      $('#results').text(deflatedString);
-    });
-
-    $('#inflate').click(function() {
-      var toInflate = $('#input').val();
-      $('#results').text(String.fromCharCode.apply(null, new Uint16Array(pako.inflate(toInflate))));
-    });
-
-  })();
-  </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
