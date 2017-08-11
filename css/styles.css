@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Harabara";
+    src: url("../fonts/Harabara.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Hand";
+    src: url("../fonts/HANDM___.ttf") format("truetype");
+}
+.header {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+}
+.hr-no-margin {
+    margin-top: 0px;
+}
+.sm-buffer {
+    margin-top: 5px;
+}

@@ -1,48 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Robin Tang - Compression Online Editor</title>
-    <script src="pako.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>Robin Tang</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="Robin Tang, Software Engineer, San Francisco" />
+    <meta name="description" content="Robin Tang's Resume" />
+    <meta name="robots" content="noodp" />
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@tang8330" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-47696676-2', 'auto');
+    ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <form>
-            <h1>Compression Interpreter</h1>
-            <div class="row">
-                <div class="col-xs-4">
-                    <h3><b>
-          Input
-        </b></h3>
-                    <textarea rows="6" class="form-control" id="input"></textarea>
-                </div>
-                <div class="col-xs-4">
-                    <h3><b>
-          Compression Type
-        </b></h3>
-                    <select>
-                        <option>ZLIB</option>
-                        <option>GZIP</option>
-                    </select>
-                    <br/>
-                    <br/>
-                    <button class="btn btn-primary" type="button" id="deflate">Deflate (pack)</button>
-                    <button class="btn btn-success" type="button" id="inflate">Inflate (unpack)</button>
-                </div>
-                <div class="col-xs-4">
-                    <h3><b>
-          Results
-        </b></h3>
-                    <textarea rows="6" class="form-control" id="results"></textarea>
-                </div>
-            </div>
-        </form>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1 class="header"><b>Robin Tang</b></h1>
+            <b><i class="fa fa-twitter"></i> @tang8330 | <i class="fa fa-mobile"></i> (510) 467-2025 | <i class="fa fa-envelope"></i> rtang.cs@gmail.com</b>
+            <br/>
+            <hr class="hr-no-margin" />
+        </div>
     </div>
-    <script src="script.js"></script>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="header"><b>Skills Profile</b></h2>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">Go</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">Java</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">Swift + Objective-C</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">Server Administration</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">HBase</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">JavaScript</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">Python</h4>
+        </div>
+        <div class="col-xs-3">
+            <h4 class="header">SQL, NoSQL</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="header"><b>Work Experience</b></h2>
+        </div>
+        <div class="col-xs-8">
+            <b>Outbound,</b><i> San Francisco, California</i>
+            <br/>
+            <b>Senior Software Engineer</b>
+            <i>- Stack used: Go, MongoDB, MySQL, HBase (Bigtable), Android (Java), iOS (Objective-C)</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>Feb 2016 - Present</b>
+        </div>
+        <div class="col-xs-12">
+            <small>Outbound helps marketers message its users around actions their customers take (or don't take)</small>
+            <ul>
+                <li>
+                    Worked on <b>"User Search and Journey"</b>, a way for customers to see all of their users data
+                    <ul>
+                        <li>The ability to search over any of the user's traits, actions that they have taken (not taken)</li>
+                        <li>Powerful feature, that can search millions of users in seconds.</li>
+                        <li>To see it in action, and to read more <a href="https://blog.outbound.io/just-released-user-search-and-journey" target="_blank">click here</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Worked on Server Infrastructure
+                        <ul>
+                            <li>Setting up and maintaining monitors and pagers</li>
+                            <li>Managing 3 MongoDB clusters</li>
+                            <li>Set up the first automation deployment (previously had to SSH into every worker)</li>
+                        </ul>
+                </li>
+                <li>Ownership of Android and iOS SDK</li>
+            </ul>
+        </div>
+        <div class="col-xs-8">
+            <b>DoctorBase (now Kareo),</b><i> San Francisco, California</i>
+            <br/>
+            <b>Software Engineer</b>
+            <i>- Stack used: PostgreSQL, C#, Perl, Java</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>June 2015 - Feb 2016</b>
+        </div>
+        <div class="col-xs-12">
+            <small>DoctorBase helps Doctors and Hospitals run their practice without the need of IT.</small>
+            <ul>
+                <li>Ownership and maintenance of <b>Practice Management Software (PMS)</b> which integrates DoctorBase with 17 other software applications</li>
+                <li>Led code reviews for production deployment</li>
+                <li>Training fellow team members and customer success</li>
+                <li>Developing Integration test framework</li>
+                <li>Worked on the technical transition from DoctorBase to Kareo</li>
+            </ul>
+        </div>
+        <div class="col-xs-8">
+            <b>Advent Software (now SS&C),</b><i> San Francisco, California</i>
+            <br/>
+            <b>Software Engineer</b>
+            <i>- Stack used: HTML, JavaScript, Python, Microsoft SQL, Mongo, C#, Shell Scripts</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>May 2014 - March 2015</b>
+        </div>
+        <div class="col-xs-12">
+            <small>Advent Software provided multiple financial softwares targeted at Mutual Funds, Hedge Funds, and Banks.</small>
+            <ul>
+                <li>Worked on an R&D team for Cloud Platform</li>
+                <li>Enhanced UX by implementing meta-data driven page model and redesigning personalization into independent blocks and got rid of dependencies</li>
+                <li>Worked to improve and solidify data services, user models, and UI meta models</li>
+                <li>Collaborated Shanghai Team to improve migration and deployment</li>
+                <li>Implemented crawler tests to find errors</li>
+            </ul>
+        </div>
+        <div class="col-xs-8">
+            <b>Canadian Tire Innovations (CTI),</b><i> Waterloo, ON</i>
+            <br/>
+            <b>Software Developer Intern</b>
+            <i>- Stack used: HTML, CSS, JavaScript, Python, MySQL, Mongo</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>Sept 2013 - Dec 2013</b>
+        </div>
+        <div class="col-xs-12">
+            <ul>
+                <li>
+                    Focuses were on server administration, relational database mapping,
+                    rapid prototyping, proof of concepts and gamification
+                </li>
+                <li>
+                    Main project being a 'Foot Sizer' application, by stepping on a pressure mat
+                    and playing a game, it accurately measures crucial things such as foot size, foot width,
+                    foot type and recommend appropriate shoes.
+                </li>
+                <li>
+                    To read more about CTI, and the some of the projects that I worked on,
+                    <a href="http://www.retailcustomerexperience.com/articles/sport-chek-flagship-launches-another-digital-revolution/" target="_blank">click here!</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-8">
+            <b>MCAP, Group of Companies,</b><i> Various</i>
+            <br/>
+            <b>Application Developer Intern</b>
+            <i>- Stack used: HTML, CSS, JavaScript</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>Apr 2012 - Apr 2013</b>
+        </div>
+        <div class="col-xs-12">
+            <ul>
+                <li>Creation of <b>"IT Order Request System"</b>, a web-app for automating and speeding up the process for company purchases
+                    <ul>
+                        <li>First year, over $1 million dollars worth of purchases went through</li>
+                        <li>Second year, over $3 million dollars worth of purchases went through</li>
+                        <li>Allowing for cost savings, reducing ordering times, and errors</li>
+                        <li>Provided troubleshooting and documentation for IT Support</li>
+                    </ul>
+                </li>
+                <li>
+                    Revamped MCAP's corporate Intra-net
+                    <ul>
+                        <li>Created one centralized location for all employees, worked with every Dept. Lead</li>
+                        <li>Combined four different intra-nets into one; and depreciating the rest</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="header"><b>Education</b></h2>
+        </div>
+        <div class="col-xs-8">
+            <b>HBSc - Computer Science (Co-op)</b>
+            <br/>
+            <i>&nbsp;Wilfrid Laurier University</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>Sept 2010 - Apr 2015</b>
+        </div>
+        <div class="col-xs-8">
+            <b>HBBA - Finance Specialization (Co-op)</b>
+            <br/>
+            <i>&nbsp;Wilfrid Laurier University</i>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <b>Sept 2010 - Apr 2015</b>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
