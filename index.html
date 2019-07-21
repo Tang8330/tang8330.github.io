@@ -4,30 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Robin Tang</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="keywords" content="Robin Tang, Software Engineer, San Francisco" />
-    <meta name="description" content="Robin Tang's Resume" />
-    <meta name="robots" content="noodp" />
-    <meta name="twitter:card" content="photo" />
-    <meta name="twitter:site" content="@tang8330" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="Robin Tang, Software Engineer, San Francisco"/>
+    <meta name="description" content="Robin Tang's Resume"/>
+    <meta name="robots" content="noodp"/>
+    <meta name="twitter:card" content="photo"/>
+    <meta name="twitter:site" content="@tang8330"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/styles.css">
     <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-47696676-2', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-47696676-2', 'auto');
+        ga('send', 'pageview');
     </script>
 </head>
 
@@ -36,9 +36,9 @@
     <div class="row">
         <div class="col-xs-12 text-center">
             <h1 class="header"><b>Robin Tang</b></h1>
-            <b><i class="fa fa-twitter"></i> @tang8330 | <i class="fa fa-mobile"></i> (510) 467-2025 | <i class="fa fa-envelope"></i> rtang.cs@gmail.com</b>
+            <b><i class="fa fa-mobile"></i> (510) 467-2025 | <i class="fa fa-envelope"></i> rtang.cs@gmail.com</b>
             <br/>
-            <hr class="hr-no-margin" />
+            <hr class="hr-no-margin"/>
         </div>
     </div>
     <div class="row">
@@ -49,10 +49,10 @@
             <h4 class="header">Go</h4>
         </div>
         <div class="col-xs-3">
-            <h4 class="header">Java</h4>
+            <h4 class="header">Python</h4>
         </div>
         <div class="col-xs-3">
-            <h4 class="header">Google Cloud Platform</h4>
+            <h4 class="header">AWS & GCP</h4>
         </div>
         <div class="col-xs-3">
             <h4 class="header">Server Administration</h4>
@@ -61,10 +61,10 @@
             <h4 class="header">Bigtable</h4>
         </div>
         <div class="col-xs-3">
-            <h4 class="header">JavaScript</h4>
+            <h4 class="header">DynamoDB</h4>
         </div>
         <div class="col-xs-3">
-            <h4 class="header">Python</h4>
+            <h4 class="header">Java</h4>
         </div>
         <div class="col-xs-3">
             <h4 class="header">SQL, NoSQL</h4>
@@ -84,12 +84,44 @@
             <b>May 2017 - Present</b>
         </div>
         <div class="col-xs-12">
-            <small>Zendesk is a service platform that builds software to empower organization and customer relationships.</small>
+            <small>Zendesk is a service platform that builds software to empower organization and customer
+                relationships.
+            </small>
             <ul>
-                <li>Automation of our Infrastructure with Terraform and Fabric</li>
-                <li>Cloud consolidation: moved AWS + DO into GCP</li>
-                <li>Migrated 200+ TB Bigtable from SSD to HDD to save $27,000+/month</li>
-            </ul>                
+                <li>Product #1: Outbound by Zendesk (Connect)</li>
+                <ul>
+                    <li>Part of the original Outbound team (1 of 5), working on Outbound by Zendesk.</li>
+                    <li>As the only full-time engineer on Outbound, on-boarding and transitioning ownership of service
+                        to 16+ engineers
+                    </li>
+                    <li>Automation of our Infrastructure with Terraform</li>
+                    <li>Cloud consolidation: moved AWS + DigitalOcean + Azure into GCP</li>
+                    <li>Migrated 200+ TB Bigtable from SSD to HDD to save $27,000+/month</li>
+                    <li>Optimized network by using private subnets to talk to managed services on GCP. Saved over $10k a
+                        month
+                    </li>
+                </ul>
+                <li>Product #2: Sunshine, Zendesk's CRM</li>
+                <ul>
+                    <li>Led the Zendesk Sunshine engineering team to stitch all Zendesk products together for upmarket
+                        initiative
+                    </li>
+                    <li>Ingestion pipeline for all internal and external integrations (REST API and gRPC w/ TLS)</li>
+                    <li>Design & implementation of Event and User persistence layer for low latency and high writes</li>
+                    <li>Design & implementation of proxy services (Envoy) to allow our regional service to be available
+                        to
+                        all Zendesk accounts
+                    </li>
+                    <li>Designed migration scripts on EMR with Spark for DynamoDB (40m items copied in less than 30 min)
+                    </li>
+                    <li>Interviewed and hired 9 engineers</li>
+                    <li>Designed and filed 2 patents</li>
+                    <ul>
+                        <li>Deterministic way to rank events based on occurrence, relevancy and importance</li>
+                        <li>Segmentation of users and events to provide actionable insights for Ecommerce</li>
+                    </ul>
+                </ul>
+            </ul>
         </div>
         <div class="col-xs-8">
             <b>Outbound,</b><i> San Francisco, California</i>
@@ -101,23 +133,28 @@
             <b>Feb 2016 - May 2017</b>
         </div>
         <div class="col-xs-12">
-            <small>Outbound helps marketers message its users around actions their customers take (or don't take)</small>
+            <small>Outbound helps marketers message its users around actions their customers take (or don't take)
+            </small>
             <ul>
                 <li>
                     Worked on <b>"User Search and Journey"</b>, a way for customers to see all of their users data
                     <ul>
-                        <li>The ability to search over any of the user's traits, actions that they have taken (not taken)</li>
+                        <li>The ability to search over any of the user's traits, actions that they have taken (not
+                            taken)
+                        </li>
                         <li>Powerful feature, that can search millions of users in seconds.</li>
-                        <li>To see it in action, and to read more <a href="https://blog.outbound.io/just-released-user-search-and-journey" target="_blank">click here</a></li>
+                        <li>To see it in action, and to read more <a
+                                href="https://blog.outbound.io/just-released-user-search-and-journey" target="_blank">click
+                            here</a></li>
                     </ul>
                 </li>
                 <li>
                     Worked on Server Infrastructure
-                        <ul>
-                            <li>Setting up and maintaining monitors and pagers</li>
-                            <li>Managing 3 MongoDB clusters</li>
-                            <li>Set up the first automation deployment (previously had to SSH into every worker)</li>
-                        </ul>
+                    <ul>
+                        <li>Setting up and maintaining monitors and pagers</li>
+                        <li>Managing 3 MongoDB clusters</li>
+                        <li>Set up the first automation deployment (previously had to SSH into every worker)</li>
+                    </ul>
                 </li>
                 <li>Ownership of Android and iOS SDK</li>
             </ul>
@@ -134,7 +171,9 @@
         <div class="col-xs-12">
             <small>DoctorBase helps Doctors and Hospitals run their practice without the need of IT.</small>
             <ul>
-                <li>Ownership and maintenance of <b>Practice Management Software (PMS)</b> which integrates DoctorBase with 17 other software applications</li>
+                <li>Ownership and maintenance of <b>Practice Management Software (PMS)</b> which integrates DoctorBase
+                    with 17 other software applications
+                </li>
                 <li>Led code reviews for production deployment</li>
                 <li>Training fellow team members and customer success</li>
                 <li>Developing Integration test framework</li>
@@ -151,10 +190,14 @@
             <b>May 2014 - March 2015</b>
         </div>
         <div class="col-xs-12">
-            <small>Advent Software provided multiple financial softwares targeted at Mutual Funds, Hedge Funds, and Banks.</small>
+            <small>Advent Software provided multiple financial softwares targeted at Mutual Funds, Hedge Funds, and
+                Banks.
+            </small>
             <ul>
                 <li>Worked on an R&D team for Cloud Platform</li>
-                <li>Enhanced UX by implementing meta-data driven page model and redesigning personalization into independent blocks and got rid of dependencies</li>
+                <li>Enhanced UX by implementing meta-data driven page model and redesigning personalization into
+                    independent blocks and got rid of dependencies
+                </li>
                 <li>Worked to improve and solidify data services, user models, and UI meta models</li>
                 <li>Collaborated Shanghai Team to improve migration and deployment</li>
                 <li>Implemented crawler tests to find errors</li>
@@ -182,7 +225,8 @@
                 </li>
                 <li>
                     To read more about CTI, and the some of the projects that I worked on,
-                    <a href="http://www.retailcustomerexperience.com/articles/sport-chek-flagship-launches-another-digital-revolution/" target="_blank">click here!</a>
+                    <a href="http://www.retailcustomerexperience.com/articles/sport-chek-flagship-launches-another-digital-revolution/"
+                       target="_blank">click here!</a>
                 </li>
             </ul>
         </div>
@@ -197,7 +241,8 @@
         </div>
         <div class="col-xs-12">
             <ul>
-                <li>Creation of <b>"IT Order Request System"</b>, a web-app for automating and speeding up the process for company purchases
+                <li>Creation of <b>"IT Order Request System"</b>, a web-app for automating and speeding up the process
+                    for company purchases
                     <ul>
                         <li>First year, over $1 million dollars worth of purchases went through</li>
                         <li>Second year, over $3 million dollars worth of purchases went through</li>
